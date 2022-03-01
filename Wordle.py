@@ -1,11 +1,12 @@
 import random
-v = 0
-wordlist= ("doofs","dylan","dystopia")
+wordlist, v = ("doofs","dylan","dystopia"), 0
 word = random.choice(wordlist)
-while v == 0:
+while v < 6:
     wordle_guess = input('--> ') 
     if word == wordle_guess:
         print(f'Yay you did it!!')
+    else:
+        v += 1
     if wordle_guess[0] == word[0]:
         print(1)
     if wordle_guess[1] == word[1]:
