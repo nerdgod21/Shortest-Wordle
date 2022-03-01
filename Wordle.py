@@ -1,5 +1,5 @@
 import random
-wordlist, v = ("doofs","dylan","dystopia"), 0
+wordlist, v = ("doofs","dylan","doodo"), 0
 word = random.choice(wordlist)
 while v < 6:
     wordle_guess = input('--> ') 
@@ -7,13 +7,7 @@ while v < 6:
         print(f'Yay you did it!!')
     else:
         v += 1
-    if wordle_guess[0] == word[0]:
-        print(1)
-    if wordle_guess[1] == word[1]:
-        print(2)
-    if wordle_guess[2] == word[2]:
-        print(3)
-    if wordle_guess[3] == word[3]:
-        print(4)
-    if wordle_guess[4] == word[4]:
-        print(5)
+    
+    for i in range(len(word)):
+        if (wordle_guess[i] == word[i]):
+            print(i+1)
