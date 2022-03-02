@@ -13,3 +13,4 @@ while v < 6:
     for i in range(len(word)):
         if (wordle_guess[i] == word[i]):
             print(i+1)
+print(word)  
